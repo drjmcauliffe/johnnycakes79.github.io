@@ -1,8 +1,8 @@
 ---
-layout:
+layout: post
 title: do i still know how to do this?
-categories: []
-tags: []
+categories: [python, hacking]
+tags: [test, quick one, tag]
 published: True
 
 ---
