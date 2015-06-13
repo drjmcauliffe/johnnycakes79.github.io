@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Map-Based Planning For BepiColombo: Farewell to ASCII Inputs</title>
+
+		<meta name="description" content="Map-Based Planning For BepiColombo: Farewell to ASCII Inputs">
+		<meta name="author" content="Jonathan McAuliffe">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/pydata.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<!-- <div class="circular" style="background: url(images/mercury.jpg) no-repeat; background-position: center; margin-left:40%;"></div> -->
+					<img src="images/solarsystemcrop.png">
+					<h1 style="text-align:center">Map-Based Planning For BepiColombo: Farewell to ASCII Inputs</h1>
+					<h4 style='text-align:center'>Jonathan McAuliffe & Santa Martinez</h4>
+					<h5 style='text-align:center'>BepiColombo Science Ground Segment</h5>
+				</section>
+
+				<!-- <section>
+					<h3 style="text-align:center">This talk</h3>
+					<div style="font-size:36px;">
+						<li>...</li>
+						<li>...</li>
+						<li>...</li>
+						<li>...</li>
+					<p><a href="http://chdoig.github.com/pydata2015-dallas-conda">http://chdoig.github.com/pydata2015-dallas-conda</a></p>
+				</section> -->
+
+
+				<!-- Example of nested vertical slides -->
+				<!-- <section data-transition="convex">
+					<section>
+						<h2>The Problem</h2>
+					</section>
+					<section>
+						<h4>The chaos of Rosetta</h4>
+						<img src="images/office-paper-chaos.jpg">
+					</section>
+					<section>
+						<h4>Contributors</h4>
+						<img src="images/data-science-2.png">
+					</section>
+					<section>
+						<h2>Data Science</h2>
+						<li>Different tasks</li>
+						<li>Different deliverables</li>
+						<li>Different contributors</li>
+					</section>
+				</section> -->
+
+				<section>
+					<img src="images/missionstomercury.png">
+				</section>
+
+				<section>
+					<section>
+						<h2>The Workshop So Far...</h2>
+					</section>
+
+					<section>
+						<h2>We have data!</h2>
+						<li class="fragment fade-in" data-autoslide="1000">How do we <u>munge</u> it?</li>
+						<li class="fragment fade-in" data-autoslide="1000">How do we <u>process</u> it?</li>
+						<li class="fragment fade-in" data-autoslide="1000">How do we <u>represent</u> it?</li>
+						<li class="fragment fade-in" data-autoslide="1000">How do we <u>share</u> it?</li>
+						<li class="fragment fade-in" data-autoslide="3000">How do we <u>use</u> it?</li>
+					</section>
+
+					<section>
+						<h2>We want <u>more</u> data!</h2>
+						<li class="fragment fade-in" data-autoslide="1000">What data?</li>
+						<li class="fragment fade-in" data-autoslide="1000">When can we get it?</li>
+						<li class="fragment fade-in" data-autoslide="1000">When best can we get it?</li>
+						<li class="fragment fade-in" data-autoslide="1000">What can I expect from it?</li>
+						<li class="fragment fade-in" data-autoslide="1000">Who do I tell that I want it?</li>
+						<li class="fragment fade-in">... and how do I tell them?</li>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>ESA's Science Ground Segments</h2>
+						<img src="images/esac.jpg">
+					</section>
+
+					<section>
+						<img src="images/beforebepi.png">
+					</section>
+
+					<section>
+						<img src="images/becausebepi.png">
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h2>Great! So where's the GIS?</h2>
+					</section>
+
+					<section>
+						<img src="images/mockup2d.png">
+					</section>
+
+					<section>
+						<img src="images/mertisswaths.jpeg">
+						<p style=" font-size:16px; height:36px; margin: -30px 0px;">
+						credit: mario d'amore, dlr
+						</p>
+					</section>
+
+					<section>
+						<img src="images/cartodbcraters.png">
+						<p style=" font-size:16px; height:36px; margin: -25px 0px;">
+						<a href="http://johnnycakes79.cartodb.com">johnnycakes79.cartodb.com</a>
+						</p>
+					</section>
+
+					<section>
+						<img src="images/mockup3d.png">
+						<p style=" height:36px; margin: -20px 0px;">
+						How do we do 3D?
+						</p>
+					</section>
+				</section>
+
+				<!-- <section>
+					<h2>Questions?</h2>
+					<p>Slides: <a href="http://bit.ly/esacgis2015_bepi">bit.ly/esacgis2015_bepi</a></p>
+					<p>Email: <a>jonathan.mcauliffe@esa.int</a></p>
+					<p>Twitter: <a href="http://twitter.com/johnnycakes79">johnnycakes79</a></p>
+				</section> -->
+
+				<section>
+					<img src="images/gotgis.png">
+					<p style=" font-size:24px; height:36px; margin: -45px 15px;">
+					<a href="https://twitter.com/johnnycakes79"><img style="vertical-align:middle" class="social-icon" src="images/twitter-icon.png"></a>
+			        <a href="https://github.com/johnnycakes79"><img style="vertical-align:middle" class="social-icon" src="images/github-icon.png">  </a>
+			        <a href="">&nbsp;johnnycakes79 </a>
+			        </p>
+				</section>
+
+			</div>
+
+
+		<div class="footer">
+			<div style="text-align:left; float:left; width:10%; margin-left:2%; margin-top:1%">
+					<img src="images/bepilogo.png">
+			</div>
+			<div style="text-align:right; float:right; width:10%; margin-left:2%; margin-top:0%">
+				<img src="images/esacgis2015_redlogo.png">
+				<!-- <p style=" font-size:24px; height:36px">
+				<a href="https://twitter.com/johnnycakes79"><img style="vertical-align:middle" class="social-icon" src="images/twitter-icon.png"></a>
+		        <a href="https://github.com/johnnycakes79"><img style="vertical-align:middle" class="social-icon" src="images/github-icon.png">  </a>
+		        <a href="">  johnnycakes79 </a>
+		        </p> -->
+	        </div>
+        </div>
+
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+		  if( window.location.search.match( /print-pdf/gi ) ) {
+		    var link = document.createElement( 'link' );
+		    link.rel = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = 'reveal.js/css/print/pdf.css';
+		    document.getElementsByTagName( 'head' )[0].appendChild( link );
+		  }
+		</script>
+
+	</body>
+</html>
